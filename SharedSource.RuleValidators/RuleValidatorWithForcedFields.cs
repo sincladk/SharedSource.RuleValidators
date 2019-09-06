@@ -68,21 +68,24 @@ namespace SharedSource.RuleValidators
 		}
 
 		/// <summary>
-		/// Updates ControlToValidate value.
+		/// Updates the field value from the corresponding value submitted for the field in the HttpContext.Request.Form[] collection
 		/// </summary>
-		/// <param name="field">Current field id is used for searching by controlsToValidate dictionary.</param>
+		/// <param name="field">Field.ID.ToString() is used for searching in the ControlsToValidate dictionary.</param>
 		protected virtual void UpdateField(Field field)
 		{
+			if (field == null) throw new ArgumentNullException(nameof(field));
+
 			HttpContext current = HttpContext.Current;
-			if (current != null)
+			string fieldIdString = field.ID.ToString();
+			if (current != null && this.ControlsToValidate.ContainsKey(fieldIdString))
 			{
-				string item = this.ControlsToValidate[field.ID.ToString()];
-				if (item != null)
+				string requestFormFieldName = this.ControlsToValidate[fieldIdString];
+				if (requestFormFieldName != null)
 				{
-					string str = current.Request.Form[item];
-					if (str != null)
+					string requestFormFieldValue = current.Request.Form[requestFormFieldName];
+					if (requestFormFieldValue != null)
 					{
-						field.Value = str;
+						field.Value = requestFormFieldValue;
 					}
 				}
 			}
