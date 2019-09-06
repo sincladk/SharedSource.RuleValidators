@@ -1,0 +1,55 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>SharedSource-RuleValidators-ItemsOnly</PackageName>
+      <Author>Dan Sinclair</Author>
+      <Version>1.0</Version>
+      <Revision />
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme />
+      <Publisher>Dan Sinclair</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/Modules/Rules Validators Module/{0FBEF422-011B-4470-AE25-1A63ED1293D3}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Modules/Rules Validators Module/Rules Validation Rule with Forced Fields/__Standard Values/{9243D2AD-E53A-46F1-B1AF-65D5527DE96B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Modules/Rules Validators Module/Rules Validation Rule with Forced Fields/{38751709-EDF9-4F6A-BB7D-D402F3729383}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Modules/Rules Validators Module/Rules Validation Rule with Forced Fields/Data/{EAB618D7-19B6-47C6-8E98-AE5F4979CD79}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Modules/Rules Validators Module/Rules Validation Rule with Forced Fields/Data/Load Fields/{0B8ED7C7-6C8A-42DE-A7CB-79826FF28503}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Overwrite</ItemMode>
+                  <ItemMergeMode>Clear</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Module Templates</Name>
+    </xitems>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>
